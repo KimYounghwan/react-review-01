@@ -8,11 +8,12 @@ import UseEffectTest1 from './comp/UseEffectTest1';
 import UseEffectTest2 from './comp/UseEffectTest2';
 import UseEffectTest3 from './comp/UseEffectTest3';
 import MyClock from './comp/MyClock';
+import MyCountdown from './comp/MyCountdown';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MyClock />
+    <MyCountdown />
   </React.StrictMode>
 );
 
