@@ -4,11 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import MyTimer from './comp/MyTimer';
+import UseEffectTest1 from './comp/UseEffectTest1';
+import UseEffectTest2 from './comp/UseEffectTest2';
+import UseEffectTest3 from './comp/UseEffectTest3';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MyTimer />
+    <UseEffectTest3 />
   </React.StrictMode>
 );
 
