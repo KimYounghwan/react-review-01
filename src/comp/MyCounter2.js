@@ -14,21 +14,24 @@ function useInterval(callback, delay) {
         }
         if (delay !== null) {
         	let id = setInterval(tick, delay);
-            return () => clearInterval(id);
+            return () => {console.log("clearInterval"); clearInterval(id);}
         }
     }, [delay]);
 }
 
 function MyCounter2(props) {
+  const [delay, setDelay] = useState(null);
 	const [count, setCount] = useState(0);
   
   useInterval(() => {
     setCount((count) => count + 1);
-  }, 1000);
+  }, delay);
 
   function startCounter(e){
+    setDelay(1000)
   }
   function stopCounter(e){
+    setDelay(null)
   }
   return (
       <div>

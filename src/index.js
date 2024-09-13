@@ -10,6 +10,7 @@ import reportWebVitals from './reportWebVitals';
 // import MyCountdown from './comp/MyCountdown';
 import MyCounter from './comp/MyCounter';
 import MyCounter2 from './comp/MyCounter2';
+import MyCounter3 from './comp/MyCounter3';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
