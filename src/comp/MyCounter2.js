@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useCallback, useRef } from 'react';
 import { useState, useEffect } from 'react';
 
 function useInterval(callback, delay) {
@@ -22,37 +22,31 @@ function useInterval(callback, delay) {
 function MyCounter2(props) {
   const [delay, setDelay] = useState(null);
 	const [count, setCount] = useState(0);
-  //state에 함수를 저장하려면 함수를 반환하는 함수를 제공해야한다.
-	const [cbfn, setCbfn] = useState(()=>()=>{
+  const upCallback = useCallback(()=>()=>{
     setCount((count) => count + 1);
-  });
+  })
+  const downCallback = useCallback(()=>()=>{
+    setCount((count) => count - 1);
+  })
+  //state에 함수를 저장하려면 함수를 반환하는 함수를 제공해야한다.
+	const [cbfn, setCbfn] = useState(upCallback);
 
-  // let increase = ()=>()=>{
-  //   setCount((count) => count + 1);
-  // };
-  // let descrease = ()=>()=>{
-  //   setCount((count) => count - 1);
-  // };
-  //증가하는 카운터
-  //감소하는 카운터
-
+  
   useInterval(cbfn, delay);
-
+  
   function startCounter(e){
     setDelay(1000)
   }
   function stopCounter(e){
     setDelay(null)
   }
+  //감소하는 카운터
   function downCounter(e){
-    setCbfn(()=>()=>{
-      setCount((count) => count - 1);
-    })
+    setCbfn(downCallback)
   }
+  //증가하는 카운터
   function upCounter(e){
-    setCbfn(()=>()=>{
-      setCount((count) => count + 1);
-    })
+    setCbfn(upCallback)
   }
   return (
       <div>
