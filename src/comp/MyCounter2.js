@@ -4,25 +4,34 @@ import { useState, useEffect } from 'react';
 function useInterval(callback, delay) {
 	const savedCallback = useRef();
     
-    useEffect(() => {
-    	savedCallback.current = callback;
-    }, [callback]);
-    
-    useEffect(() => {
-    	function tick() {
-        	savedCallback.current();
-        }
-        if (delay !== null) {
-        	let id = setInterval(tick, delay);
-            return () => {console.log("clearInterval"); clearInterval(id);}
-        }
-    }, [delay]);
+  useEffect(() => {
+    savedCallback.current = callback;
+  }, [callback]);
+  
+  useEffect(() => {
+    function tick() {
+        savedCallback.current();
+      }
+      if (delay !== null) {
+        let id = setInterval(tick, delay);
+          return () => {console.log("clearInterval"); clearInterval(id);}
+      }
+  }, [delay]);
 }
 
 function MyCounter2(props) {
   const [delay, setDelay] = useState(null);
 	const [count, setCount] = useState(0);
-  
+  const callbackFn = useRef(increase);
+  function increase(){
+    setCount( count+1 )
+  }
+  function decrease(){
+    setCount( count-1 )
+  }
+  //증가하는 카운터
+  //감소하는 카운터
+
   useInterval(() => {
     setCount((count) => count + 1);
   }, delay);
