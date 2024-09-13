@@ -1,11 +1,12 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-function useTimer(initialTime) {
+function useCounter(initialTime) {
   const [time, setTime] = useState(initialTime);
 
   useEffect(() => {
     const timer = setInterval(() => {
+      //화면갱신요청
       setTime((prevTime) => prevTime + 1);
     }, 1000);
 
@@ -15,14 +16,14 @@ function useTimer(initialTime) {
   return time;
 }
 
-function MyTimer(props) {
-
-    const timer = useTimer(0);
-    return (
-        <div>
-            <h1>{timer}</h1>
-        </div>
-    );
+function MyCounter(props) {
+  const timer = useCounter(0);
+  console.log("MyCounter timer="+timer)
+  return (
+      <div>
+          <h1>{timer}</h1>
+      </div>
+  );
 }
 
-export default MyTimer;
+export default MyCounter;
