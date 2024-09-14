@@ -3,19 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import UseEffectTest1 from './comp/UseEffectTest1';
-// import UseEffectTest2 from './comp/UseEffectTest2';
-// import UseEffectTest3 from './comp/UseEffectTest3';
-// import MyClock from './comp/MyClock';
-// import MyCountdown from './comp/MyCountdown';
-import MyCounter from './comp/MyCounter';
-import MyCounter2 from './comp/MyCounter2';
-import MyCounter3 from './comp/MyCounter3';
+import MyClock3useMyTimeClock from './comp/MyClock3useMyTimeClock';
+// import MyCounter from './comp/MyCounter';
+// import MyCounter2 from './comp/MyCounter2';
+// import MyCounter3 from './comp/MyCounter3';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MyCounter2 />
+    <MyClock3useMyTimeClock />
   </React.StrictMode>
 );
 
