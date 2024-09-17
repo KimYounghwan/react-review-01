@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import MyClock3useMyTimeClock from './comp/MyClock3useMyTimeClock';
+import MyBmiCalculator from './comp/bmi-calculator/MyBmiCalculator';
 // import MyCounter from './comp/MyCounter';
 // import MyCounter2 from './comp/MyCounter2';
 // import MyCounter3 from './comp/MyCounter3';
@@ -11,7 +12,7 @@ import MyClock3useMyTimeClock from './comp/MyClock3useMyTimeClock';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MyClock3useMyTimeClock />
+    <MyBmiCalculator />
   </React.StrictMode>
 );
 
