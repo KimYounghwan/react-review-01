@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
 import MyTodoApp1 from './comp/todo-app/MyTodoApp1';
+import GfGWeatherApp from './comp/weather/GfGWeatherApp';
 // import MyClock3useMyTimeClock from './comp/MyClock3useMyTimeClock';
 // import MyBmiCalculator from './comp/bmi-calculator/MyBmiCalculator';
 // import TodoWrapper from './comp/todo-app-ope/TodoWrapper';
@@ -14,7 +15,7 @@ import MyTodoApp1 from './comp/todo-app/MyTodoApp1';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render( 
   <React.StrictMode>
-    <MyTodoApp1 />
+    <GfGWeatherApp />
   </React.StrictMode>
 );
 
