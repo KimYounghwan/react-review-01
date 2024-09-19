@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import MyTodoApp1 from './comp/todo-app/MyTodoApp1';
 import GfGWeatherApp from './comp/weather/GfGWeatherApp';
+import MyCalendarTodo from './comp/calendar/MyCalendarTodo';
 // import MyClock3useMyTimeClock from './comp/MyClock3useMyTimeClock';
 // import MyBmiCalculator from './comp/bmi-calculator/MyBmiCalculator';
 // import TodoWrapper from './comp/todo-app-ope/TodoWrapper';
@@ -15,7 +16,7 @@ import GfGWeatherApp from './comp/weather/GfGWeatherApp';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render( 
   <React.StrictMode>
-    <GfGWeatherApp />
+    <MyCalendarTodo />
   </React.StrictMode>
 );
 
